@@ -16,7 +16,7 @@ let timer;
 function startTimer() {
   timer = setTimeout(function () {
     let qba = document.querySelector("#rst");
-    let restart = `<div class="container flex justify-center items-center flex-col"><h1>Lol Poor Kid </h1><button class="bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700" id="restart">Retry</button></div>`;
+    let restart = `<div class="container flex justify-center items-center flex-col"><h1>Need a Calculator?</h1><button class="bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700" id="restart">Do A Plus Before Buzz</button></div>`;
     qba.innerHTML = restart;
     counter = 0;
     let reload = document.querySelector("#restart");

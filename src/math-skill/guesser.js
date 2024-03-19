@@ -1,7 +1,7 @@
 let counter = 0;
 let sum = document.querySelector(".value");
 let crt = document.querySelector("#gen");
-
+sum.style.display = "none";
 function generateNumbers() {
   let randomNum = Math.floor(Math.random() * 20) + 1;
   let mandomNum = Math.floor(Math.random() * 20) + 34;
@@ -16,7 +16,7 @@ let timer;
 function startTimer() {
   timer = setTimeout(function () {
     let qba = document.querySelector("#rst");
-    let restart = `<div class="container flex justify-center items-center flex-col"><h1>Need a Calculator?</h1><button class="bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700" id="restart">Do A Plus Before Buzz</button></div>`;
+    let restart = `<div class="container flex justify-center items-center flex-col"><h1>You </h1><button class="bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700" id="restart">Retry</button></div>`;
     qba.innerHTML = restart;
     counter = 0;
     let reload = document.querySelector("#restart");
@@ -27,6 +27,7 @@ function startTimer() {
 }
 
 let btn = document.querySelector("#conf");
+btn.style.display = "none";
 btn.addEventListener("click", function () {
   clearTimeout(timer);
   startTimer();
@@ -37,7 +38,7 @@ btn.addEventListener("click", function () {
     console.log("You won");
     answer.value = "";
     counter++;
-    if (counter === 2) {
+    if (counter === 10) {
       let qba = document.querySelector("#rst");
       let restart = `<div class="container flex justify-center items-center flex-col"><h1>Luck favors the beginner</h1><button class="bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700" id="restart">Restart</button></div>`;
       qba.innerHTML = restart;
@@ -72,5 +73,7 @@ let beta = document.querySelector("#startgame");
 
 beta.addEventListener("click", function () {
   beta.style.display = "none";
+  sum.style.display = "block";
+  btn.style.display = "block";
   startTimer();
 });

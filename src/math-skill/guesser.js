@@ -37,6 +37,9 @@ btn.addEventListener("click", function () {
     console.log("You won");
     answer.value = "";
     counter++;
+      let q = `<h3>Score: ${counter}</h3>`;
+    let show = document.querySelector("#score");
+    show.innerHTML = q;
     if (counter === 10) {
       let qba = document.querySelector("#rst");
       let restart = `<div class="container flex justify-center items-center flex-col"><h1>Luck favors the beginner</h1><button class="bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700" id="restart">Restart</button></div>`;

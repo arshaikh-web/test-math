@@ -66,7 +66,7 @@ btn.addEventListener("click", function () {
 
 let start = `<div class="container flex flex-col items-center"><button id="startgame" class="bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700">Start Game</button><div class="bg-yellow-200 border border-yellow-400 text-yellow-800 px-4 py-2 rounded-md shadow-md">
 Tere Paas 10 Seconds Hoge har Answers Guess Karne Ke liye
-</div><div class="bg-green-200 border border-red-400 text-yellow-800 px-4 py-2 rounded-md shadow-md">You'll Have 10 Seconds To guess The Ansewr
+</div><div class="bg-green-200 border border-red-400 text-yellow-800 px-4 py-2 rounded-md shadow-md">You'll Have 10 Seconds To guess The Answer
 </div></div>
 `;
 let qba = document.querySelector("#rst");
